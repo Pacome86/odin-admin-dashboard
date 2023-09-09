@@ -415,8 +415,6 @@ body {
     grid-template-rows: repeat(3, auto);
     align-content: start;
     gap: 50px;
-
-    /* For visualization */
     background-color: #0ea5e9;
     color: white;
     
@@ -453,20 +451,146 @@ body {
 
 .header {
     grid-column: 2;
-
-    /* For visualization */
-    /* background-color: aliceblue; */
-    /* border: 2px solid sandybrown; */
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
+
+.top-left {
+    /* For visualization */
+    /* border: 1px solid black;
+    background-color: rgba(255, 0, 0, .4); */
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    place-items: center;
+    gap: 20px;
+}
+
+.top-right {
+    /* For visualization */
+    /* border: 1px solid orange;
+    background-color: rgba(0, 255, 0, .4); */
+
+    /* Grid */
+    padding: 10px;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    place-items: center;
+    gap: 40px;
+}
+
+.bottom-left {
+    /* For visualization */
+    /* border: 1px solid black;
+    background-color: rgba(0, 0, 255, .4); */
+
+    /* Grid */
+    align-self: end;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "avatar greetings"
+        "avatar username";
+    align-items: center;
+    align-content: center;
+    
+
+    
+}
+
+.bottom-left h1 {
+    display: inline;
+    margin-top: 0;
+    grid-area: username;
+    align-self: start;
+}
+
+.bottom-left span {
+    font-weight: 600;
+    margin-top: 20px;
+    grid-area: greetings;
+}
+
+.bottom-right {
+    /* For visualization */
+    /* border: 1px solid gold;
+    background-color: rgba(255, 0, 255, .4); */
+
+    /* Grid */
+    justify-self: end;
+    align-self: center;
+}
+
+.header input[type="image"] {
+    width: 28px;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.header input[type="search"] {
+    width: 60rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: #eff6ff;
+    border: none;
+    padding: 16px;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+
+img.avatar-1,
+button.avatar-1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    grid-area: avatar;
+}
+
+img.avatar-2,
+button.avatar-2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bottom-right button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    background-color: #0ea5e9;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+
 
 /* Main-content styles */
 
 .main-content {
     grid-row: 2;
     grid-column: 2;
+    background-color: #eff6ff;
 
     /* For visualization */
-    /* background-color: rgb(249, 247, 247); */
-    background-color: #f0f9ff;
-    border: 2px solid blue;
+    
 }
