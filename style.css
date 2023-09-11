@@ -508,6 +508,8 @@ body {
     /* Grid */
     justify-self: end;
     align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
 }
 
 .header input[type="image"] {
